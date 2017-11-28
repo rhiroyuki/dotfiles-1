@@ -1,0 +1,26 @@
+let g:yadr_disable_solarized_enhancements = 1
+set background=dark
+colorscheme gruvbox
+
+set mouse=a
+set autoread
+
+nnoremap <Leader>- :wincmd _<cr>:wincmd \|<cr>
+nnoremap <Leader>= :wincmd =<cr>
+
+nnoremap <Leader>rs :call RunCurrentSpecFile()<CR>
+nnoremap <Leader>rn :call RunNearestSpec()<CR>
+nnoremap <Leader>rl :call RunLastSpec()<CR>
+nnoremap <Leader>ra :call RunAllSpecs()<CR>
+nnoremap <leader>c :VtrSendKeysRaw ^C<cr>
+
+let is_tmux = $TMUX
+if is_tmux != ""
+  autocmd VimEnter * VtrAttachToPane
+endif
+
+if filereadable(expand("./bin/rspec"))
+  let g:rspec_command = "VtrSendCommandToRunner! ./bin/rspec {spec}"
+else
+  let g:rspec_command = "VtrSendCommandToRunner! rspec {spec}"
+endif

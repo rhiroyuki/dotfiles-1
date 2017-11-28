@@ -7,6 +7,7 @@ Bundle "bogado/file-line.git"
 Bundle "briandoll/change-inside-surroundings.vim.git"
 Bundle "chrisbra/NrrwRgn"
 Bundle "christoomey/vim-tmux-navigator"
+Bundle 'christoomey/vim-tmux-runner'
 Bundle "editorconfig/editorconfig-vim"
 Bundle "godlygeek/tabular"
 Bundle "goldfeld/ctrlr.vim"
@@ -29,3 +30,4 @@ Bundle "vim-scripts/lastpos.vim"
 Bundle "vim-scripts/matchit.zip.git"
 Bundle "vim-scripts/sudo.vim"
 Bundle 'pbrisbin/vim-mkdir'
+Bundle 'tmux-plugins/vim-tmux-focus-events'
